@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="view" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewManagerController">
+   <children>
+      <VBox prefHeight="600.0" prefWidth="201.0" styleClass="control-panel">
+         <children>
+            <ImageView fitHeight="170.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icon/img_5a91663180942-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnStatistic" onAction="#clickStatistic" prefHeight="52.0" prefWidth="238.0" styleClass="control-button" text="Statistics">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon/statistics.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnAccount" onAction="#clickAccount" prefHeight="52.0" prefWidth="238.0" styleClass="control-button" text="Account">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon/account.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnCategory" onAction="#clickCategory" prefHeight="52.0" prefWidth="238.0" styleClass="control-button" stylesheets="@../css/styles.css" text="Category">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon/icons8-menu-60.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnMeal" onAction="#clickMeal" prefHeight="52.0" prefWidth="224.0" styleClass="control-button" text="Meals">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon/meals.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnDrink" onAction="#clickDrink" prefHeight="52.0" prefWidth="238.0" styleClass="control-button" text="Drinks">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon/drinks.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnTable" onAction="#clickTable" prefHeight="52.0" prefWidth="238.0" styleClass="control-button" text="Tables">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon/table.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnView" onAction="#clickView" prefHeight="52.0" prefWidth="238.0" style="-fx-background-color: #DEB887;" text="View">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon/icons8-mark-view-as-non-hidden-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Pane prefHeight="70.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnLogout" alignment="CENTER" contentDisplay="CENTER" layoutX="73.0" layoutY="17.0" mnemonicParsing="false" onAction="#clickLogout" styleClass="logout-button" text="Log Out" textFill="WHITE" />
+               </children></Pane>
+         </children>
+      </VBox>
+      <VBox layoutX="529.0" layoutY="110.0" prefHeight="460.0" prefWidth="362.0">
+         <children>
+            <TableView fx:id="tbDetail" prefHeight="459.0" prefWidth="362.0" styleClass="table">
+              <columns>
+                <TableColumn fx:id="tcDishes" prefWidth="182.0" text="List of dishes" />
+                <TableColumn fx:id="tcDishesStatus" prefWidth="179.0" text="Status" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+      <HBox layoutX="235.0" prefHeight="100.0" prefWidth="657.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="100.0" prefWidth="306.0" text="TABLE VIEW">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="92.0" prefWidth="111.0" />
+            <GridPane fx:id="gpCustomer" prefHeight="221.0" prefWidth="362.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Customer Name">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="Phone Number" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbCustomer" GridPane.columnIndex="1" />
+                  <Label fx:id="lbPhone" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+      <TableView fx:id="tbViewTable" layoutX="235.0" layoutY="110.0" onMouseClicked="#clickChoose" prefHeight="460.0" prefWidth="279.0" styleClass="table">
+        <columns>
+          <TableColumn fx:id="tcFloor" prefWidth="75.0" text="Floor" />
+          <TableColumn fx:id="tcTableNo" prefWidth="75.0" text="Table No" />
+            <TableColumn fx:id="tcTableStatus" prefWidth="128.0" text="Status" />
+        </columns>
+      </TableView>
+   </children>
+</Pane>

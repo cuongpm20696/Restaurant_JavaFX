@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="view" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MealsManagerController">
+   <children>
+      <VBox prefHeight="600.0" prefWidth="201.0" styleClass="control-panel">
+         <children>
+            <ImageView fitHeight="170.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icon/img_5a91663180942-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnStatistic" onAction="#clickStatistic" prefHeight="52.0" prefWidth="238.0" styleClass="control-button" stylesheets="@../css/styles.css" text="Statistics">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon/statistics.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnAccount" onAction="#clickAccount" prefHeight="52.0" prefWidth="238.0" styleClass="control-button" stylesheets="@../css/styles.css" text="Account">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon/account.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnCategory" onAction="#clickCategory" prefHeight="52.0" prefWidth="238.0" styleClass="control-button" stylesheets="@../css/styles.css" text="Category">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon/icons8-menu-60.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnMeal" onAction="#clickMeal" prefHeight="52.0" prefWidth="223.0" style="-fx-background-color: #DEB887;" styleClass="control-button" stylesheets="@../css/styles.css" text="Meals">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon/meals.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnDrink" onAction="#clickDrink" prefHeight="52.0" prefWidth="238.0" styleClass="control-button" stylesheets="@../css/styles.css" text="Drinks">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon/drinks.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnTable" onAction="#clickTable" prefHeight="52.0" prefWidth="238.0" styleClass="control-button" stylesheets="@../css/styles.css" text="Tables">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon/table.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnView" onAction="#clickView" prefHeight="52.0" prefWidth="238.0" styleClass="control-button" stylesheets="@../css/styles.css" text="View">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon/icons8-mark-view-as-non-hidden-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Pane prefHeight="70.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnLogout" alignment="CENTER" contentDisplay="CENTER" layoutX="73.0" layoutY="17.0" mnemonicParsing="false" onAction="#clickLogout" styleClass="logout-button" text="Log Out" textFill="WHITE" />
+               </children></Pane>
+         </children>
+      </VBox>
+      <HBox layoutX="235.0" prefHeight="100.0" prefWidth="665.0">
+         <children>
+            <Pane prefHeight="100.0" prefWidth="180.0" />
+            <Label alignment="CENTER" prefHeight="95.0" prefWidth="296.0" text="MEALS">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <TableView fx:id="tbMeal" layoutX="450.0" layoutY="100.0" prefHeight="488.0" prefWidth="440.0" styleClass="table">
+        <columns>
+          <TableColumn fx:id="tcMealId" prefWidth="70.0" text="ID" />
+          <TableColumn fx:id="tcMealName" prefWidth="163.0" text="Name" />
+            <TableColumn fx:id="tcMealType" prefWidth="95.0" text="Category" />
+            <TableColumn fx:id="tcMealPrice" prefWidth="121.0" text="Price" />
+        </columns>
+      </TableView>
+      <ImageView fx:id="imgMeal" fitHeight="170.0" fitWidth="195.0" layoutX="251.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" />
+      <VBox layoutX="235.0" layoutY="300.0" prefHeight="183.0" prefWidth="214.0">
+         <children>
+            <Button fx:id="btnAddMeal" mnemonicParsing="false" onAction="#clickAddMeal" prefHeight="31.0" prefWidth="106.0" styleClass="edit-button" text="Add Meals" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="50.0" top="20.0" />
+               </VBox.margin></Button>
+            <Button fx:id="btnEditMeal" mnemonicParsing="false" onAction="#clickEditMeal" prefHeight="31.0" prefWidth="106.0" styleClass="edit-button" text="Edit Meals" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="50.0" />
+               </VBox.margin></Button>
+            <Button fx:id="btnDeleteMeal" mnemonicParsing="false" onAction="#clickDeleteMeal" prefHeight="32.0" prefWidth="107.0" styleClass="delete-button" text="Delete Meals" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="50.0" />
+               </VBox.margin></Button>
+         </children>
+      </VBox>
+   </children>
+</Pane>

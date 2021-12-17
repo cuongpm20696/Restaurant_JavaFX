@@ -1,0 +1,89 @@
+/*.login-background{*/
+/*    -fx-background-image: url("D:/Study/Project 2/QuanLyNhaHang/main/img/background/tip-1---df-plano.jpg");*/
+/*    -fx-background-repeat: no-repeat;*/
+/*    -fx-background-size: 900 600;*/
+/*    -fx-background-position: center center;*/
+/*}*/
+
+/*-------------------ALL----------------------------------------*/
+.text-field{
+    -fx-background-radius: 50;
+}
+
+
+
+/*--------------------LOGIN-------------------------------------------*/
+.user-background{
+    -fx-background-color: #DCDCDC;
+    -fx-opacity: 0.9;
+}
+.language-box{
+    -fx-background-color:  #E8E8E8;
+    -fx-background-radius: 20;
+}
+.login-button{
+    -fx-background-color:  #FFDEAD;
+    -fx-background-radius: 10;
+}
+.login-button:hover{
+    -fx-background-color: #D2691E;
+    -fx-background-radius: 10;
+}
+
+/*--------------------MANAGER----------------------------------*/
+.pane-statistics{
+    -fx-background-color: #222222;
+}
+.control-panel{
+    -fx-background-color: #FFF8DC;
+}
+.control-button{
+    -fx-background-color:  #FFF8DC;
+
+}
+.control-button:hover{
+    -fx-background-color: #DEB887;
+}
+.view{
+    -fx-background-color: #DEB887;
+}
+.logout-button{
+    -fx-background-color: #A0522D;
+}
+.logout-button:hover{
+    -fx-background-color: #000000;
+}
+.edit-button{
+    -fx-background-color: #000000;
+}
+.edit-button:hover{
+    -fx-background-color: #2F4F4F;
+}
+.delete-button{
+    -fx-background-color: red;
+}
+.delete-button:hover{
+    -fx-background-color: #DC143C;
+}
+.table{
+    -fx-background-color: #FFEBCD;
+}
+
+.tables{
+    -fx-background-radius: 30px;
+    -fx-background-color: white;
+}
+.tables:hover{
+     -fx-background-radius: 30px;
+    -fx-background-color: #DCDCDC;
+}
+
+/*--------------------TABLE ODER----------------------------*/
+.fruit-item{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 30;
+    -fx-start-margin: 10;
+}
+.shadow{
+    -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);
+}

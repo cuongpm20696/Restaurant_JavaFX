@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="view" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AccountManagerController">
+   <children>
+      <VBox prefHeight="600.0" prefWidth="201.0" styleClass="control-panel" stylesheets="@../css/styles.css">
+         <children>
+            <ImageView fitHeight="170.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icon/img_5a91663180942-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnStatistic" onAction="#clickStatistic" prefHeight="52.0" prefWidth="238.0" styleClass="control-button" stylesheets="@../css/styles.css" text="Statistics">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon/statistics.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnAccount" onAction="#clickAccount" prefHeight="52.0" prefWidth="238.0" style="-fx-background-color: #DEB887;" styleClass="control-button" text="Account">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon/account.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnCategory" onAction="#clickCategory" prefHeight="52.0" prefWidth="238.0" styleClass="control-button" stylesheets="@../css/styles.css" text="Category">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon/icons8-menu-60.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnMeal" onAction="#clickMeal" prefHeight="52.0" prefWidth="229.0" styleClass="control-button" text="Meals">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon/meals.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnDrink" onAction="#clickDrink" prefHeight="52.0" prefWidth="238.0" styleClass="control-button" text="Drinks">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon/drinks.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnTable" onAction="#clickTable" prefHeight="52.0" prefWidth="238.0" styleClass="control-button" text="Tables">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon/table.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnView" onAction="#clickView" prefHeight="52.0" prefWidth="238.0" styleClass="control-button" text="View">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon/icons8-mark-view-as-non-hidden-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Pane prefHeight="70.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnLogout" alignment="CENTER" contentDisplay="CENTER" layoutX="73.0" layoutY="17.0" mnemonicParsing="false" onAction="#clickLogout" styleClass="logout-button" text="Log Out" textFill="WHITE" />
+               </children></Pane>
+         </children>
+      </VBox>
+      <HBox layoutX="235.0" prefHeight="100.0" prefWidth="665.0">
+         <children>
+            <Pane prefHeight="100.0" prefWidth="180.0" />
+            <Label alignment="CENTER" prefHeight="95.0" prefWidth="296.0" text="ACCOUNT" textFill="#171717">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <TableView fx:id="tbAccount" layoutX="236.0" layoutY="100.0" prefHeight="393.0" prefWidth="658.0" styleClass="table">
+        <columns>
+          <TableColumn fx:id="tcID" prefWidth="38.0" text="ID" />
+          <TableColumn fx:id="tcUsername" prefWidth="186.0" text="Username" />
+            <TableColumn fx:id="tcPassword" prefWidth="163.0" text="Password" />
+            <TableColumn fx:id="tcType" prefWidth="140.0" text="Type" />
+            <TableColumn fx:id="tcStatus" prefWidth="130.0" text="Status" />
+        </columns>
+      </TableView>
+      <Pane layoutX="299.0" layoutY="493.0" prefHeight="100.0" prefWidth="532.0" stylesheets="@../css/styles.css">
+         <children>
+            <Button fx:id="btnAddAccount" layoutX="14.0" layoutY="35.0" mnemonicParsing="false" onAction="#clickAddAccount" prefHeight="31.0" prefWidth="121.0" styleClass="edit-button" stylesheets="@../css/styles.css" text="Add Account" textFill="WHITE" />
+            <Button fx:id="btnEditAccount" layoutX="144.0" layoutY="35.0" mnemonicParsing="false" onAction="#clickEditAccount" prefHeight="31.0" prefWidth="121.0" styleClass="edit-button" stylesheets="@../css/styles.css" text="Edit Account" textFill="WHITE" />
+            <Button fx:id="btnLockAccount" layoutX="276.0" layoutY="35.0" mnemonicParsing="false" onAction="#clickLockAccount" prefHeight="31.0" prefWidth="112.0" styleClass="delete-button" stylesheets="@../css/styles.css" text="Lock Account" textFill="WHITE" />
+            <Button fx:id="btnUnlockAccount" layoutX="393.0" layoutY="35.0" mnemonicParsing="false" onAction="#clickUnlockAccount" prefHeight="31.0" prefWidth="133.0" styleClass="edit-button" stylesheets="@../css/styles.css" text="Unlock Account" textFill="WHITE" />
+         </children>
+      </Pane>
+   </children>
+</Pane>

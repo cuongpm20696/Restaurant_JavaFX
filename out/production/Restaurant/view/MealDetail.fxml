@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="250.0" maxWidth="200.0" minHeight="250.0" minWidth="200.0" prefHeight="250.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MealDetailController">
+   <children>
+      <AnchorPane minHeight="0.0" minWidth="0.0" onMouseClicked="#clickMeal" prefHeight="250.0" prefWidth="200.0" stylesheets="@../css/styles.css">
+         <children>
+            <VBox prefHeight="250.0" prefWidth="200.0" stylesheets="@../css/styles.css">
+               <children>
+                  <HBox fx:id="bhMealDetail" prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="lbName" prefHeight="50.0" prefWidth="146.0" text="Breakfast">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="idMeal" prefHeight="0.0" prefWidth="0.0" style="-fx-opacity: 0;" text="Label" />
+                        <Label fx:id="lbPrice" alignment="CENTER" prefHeight="58.0" prefWidth="112.0" text="\$10">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <ImageView fx:id="imgFood" fitHeight="218.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/images/breakfast-2.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+         <styleClass>
+            <String fx:value="control-button" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </AnchorPane>
+   </children>
+</Pane>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="197.0" prefWidth="194.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ChooseTableChildController">
+   <children>
+      <AnchorPane layoutX="-3.0" onMouseClicked="#clickTable" prefHeight="200.0" prefWidth="200.0" stylesheets="@../css/styles.css">
+         <children>
+            <VBox layoutX="2.0" layoutY="-3.0" prefHeight="200.0" prefWidth="194.0">
+               <children>
+                  <Label fx:id="lbTableNumber" alignment="CENTER" prefHeight="51.0" prefWidth="194.0" text="Table1">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="114.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/icon/icons8-dining-table-64.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="47.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label fx:id="lbStatus" alignment="CENTER" prefHeight="46.0" prefWidth="194.0" text="Empty" textFill="RED">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Label fx:id="idTable" style="-fx-opacity: 0;" text="Label" />
+         </children>
+         <styleClass>
+            <String fx:value="shadow" />
+            <String fx:value="control-button" />
+         </styleClass>
+      </AnchorPane>
+   </children>
+</Pane>

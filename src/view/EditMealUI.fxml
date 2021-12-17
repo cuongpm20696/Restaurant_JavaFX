@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="gridMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="531.0" prefWidth="446.0" styleClass="control-panel" stylesheets="@../css/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EditMealController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label alignment="CENTER" text="Category" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="40.0" />
+         </GridPane.margin>
+      </Label>
+      <Label alignment="CENTER" text="Price" GridPane.rowIndex="3">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="40.0" />
+         </GridPane.margin>
+      </Label>
+      <TextField fx:id="txtName" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <GridPane.margin>
+            <Insets right="20.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField fx:id="txtPrice" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <GridPane.margin>
+            <Insets right="20.0" />
+         </GridPane.margin>
+      </TextField>
+      <Button fx:id="btnSubmit" mnemonicParsing="false" onAction="#clickSubmit" prefHeight="36.0" prefWidth="158.0" styleClass="logout-button" text="Submit" textFill="WHITE" GridPane.rowIndex="6">
+         <GridPane.margin>
+            <Insets left="60.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="btnBack" mnemonicParsing="false" onAction="#clickBack" prefHeight="36.0" prefWidth="158.0" styleClass="logout-button" text="Back" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </Button>
+      <Label alignment="CENTER" prefHeight="48.0" prefWidth="280.0" text="EDIT MEAL" textAlignment="CENTER" GridPane.columnSpan="2">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="90.0" />
+         </GridPane.margin>
+      </Label>
+      <ChoiceBox fx:id="cbCategory" prefHeight="31.0" prefWidth="178.0" styleClass="language-box" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Label alignment="CENTER" text="Name" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="40.0" />
+         </GridPane.margin>
+      </Label>
+      <Label alignment="CENTER" text="Image" GridPane.rowIndex="4">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="40.0" />
+         </GridPane.margin>
+      </Label>
+
+      <Button fx:id="btnUpload" mnemonicParsing="false" onAction="#clickUpload" prefHeight="26.0" prefWidth="188.0" styleClass="text-field" text="Upload" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets right="20.0" />
+         </GridPane.margin>
+      </Button>
+      <Label fx:id="lbImage" prefHeight="26.0" prefWidth="178.0" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets left="70.0" />
+         </GridPane.margin>
+      </Label>
+      <ImageView fx:id="imgUpload" fitHeight="78.0" fitWidth="106.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets left="40.0" />
+         </GridPane.margin>
+      </ImageView>
+   </children>
+</GridPane>
